@@ -42,7 +42,7 @@
       </div>
 
       <!== Product Details ==>
-      <div v-else-if="product" class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+      <div v-else-if="product" class="bg-white rounded-xl  overflow-hidden border border-gray-100">
         <div class="grid lg:grid-cols-2 gap-0">
           <!-- Image Section -->
           <div class="relative bg-linear-to-br from-gray-100 to-gray-50 p-8 lg:p-12 flex items-center justify-center">
@@ -54,7 +54,7 @@
             <NuxtImg
               :src="product.image"
               :alt="product.name"
-              class="w-full max-w-md rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
+              class="w-full max-w-md rounded shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </div>
 
@@ -96,20 +96,18 @@
             </div>
             
             <!== Action Buttons ==>
-            <div class="space-y-3 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <button
                 @click="addToCart(product)"
-                class="w-full bg-linear-to-r from-blue-600 to-indigo-600 cursor-pointer text-white px-4 py-3 rounded-xl hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 lg:text-lg font-semibold"
+                class="flex-1 bg-linear-to-r from-blue-600 to-indigo-600 cursor-pointer text-white px-4 py-2.5 rounded-lg hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base font-semibold"
               >
-                
-                Add to Cart
+                 Add to Cart
               </button>
               <button
                 @click="addToCart(product); navigateTo('/cart')"
-                class="w-full bg-gray-900 cursor-pointer text-white px-4 py-3 rounded-xl hover:bg-gray-800 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 text-lg font-semibold"
+                class="flex-1 bg-gray-900 cursor-pointer text-white px-4 py-2.5 rounded-lg hover:bg-gray-800 hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base font-semibold"
               >
-                
-                Buy Now
+             Buy Now
               </button>
             </div>
           </div>
